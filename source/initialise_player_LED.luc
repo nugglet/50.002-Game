@@ -1,0 +1,19 @@
+module initialise_player_LED (
+    input player[16],
+    output playerled[6][24]
+  ) {
+  
+  var i;
+
+  always {
+    playerled = 6x{{h000000}};
+  
+    for (i = 0; i < 6; i++) {
+      if (player[i] == 1) {
+        playerled[i] = hFF0000;
+      }
+      else {
+        playerled[i] = h000000;
+      }
+    }
+}

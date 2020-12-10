@@ -1,0 +1,1483 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Dec  1 16:17:24 2020
+| Host         : LAPTOP-JUUSF46K running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file au_top_0_timing_summary_routed.rpt -pb au_top_0_timing_summary_routed.pb -rpx au_top_0_timing_summary_routed.rpx -warn_on_violation
+| Design       : au_top_0
+| Device       : 7a35t-ftg256
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (4)
+6. checking no_output_delay (7)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (4)
+------------------------------
+ There are 4 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (7)
+-------------------------------
+ There are 7 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.329        0.000                      0                 1411        0.142        0.000                      0                 1411        4.500        0.000                       0                   502  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)       Period(ns)      Frequency(MHz)
+-----  ------------       ----------      --------------
+clk_0  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_0               0.329        0.000                      0                 1411        0.142        0.000                      0                 1411        4.500        0.000                       0                   502  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_0
+  To Clock:  clk_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.329ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.142ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.329ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_temp_var_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.575ns  (logic 2.577ns (26.914%)  route 6.998ns (73.086%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.030ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.844ns = ( 14.844 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.935    14.708    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X8Y20          FDRE                                         r  gameCPU/game_regfile/M_temp_var_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.439    14.844    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X8Y20          FDRE                                         r  gameCPU/game_regfile/M_temp_var_q_reg[0]/C
+                         clock pessimism              0.259    15.103    
+                         clock uncertainty           -0.035    15.068    
+    SLICE_X8Y20          FDRE (Setup_fdre_C_D)       -0.031    15.037    gameCPU/game_regfile/M_temp_var_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.037    
+                         arrival time                         -14.708    
+  -------------------------------------------------------------------
+                         slack                                  0.329    
+
+Slack (MET) :             0.417ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_column5_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.524ns  (logic 2.577ns (27.058%)  route 6.947ns (72.942%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.908ns = ( 14.908 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.884    14.657    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X6Y22          FDRE                                         r  gameCPU/game_regfile/M_column5_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.503    14.908    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X6Y22          FDRE                                         r  gameCPU/game_regfile/M_column5_q_reg[0]/C
+                         clock pessimism              0.259    15.167    
+                         clock uncertainty           -0.035    15.132    
+    SLICE_X6Y22          FDRE (Setup_fdre_C_D)       -0.058    15.074    gameCPU/game_regfile/M_column5_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.074    
+                         arrival time                         -14.657    
+  -------------------------------------------------------------------
+                         slack                                  0.417    
+
+Slack (MET) :             0.421ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_player_obs_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.441ns  (logic 2.577ns (27.296%)  route 6.864ns (72.704%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.838ns = ( 14.838 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.800    14.574    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X9Y24          FDRE                                         r  gameCPU/game_regfile/M_player_obs_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.433    14.838    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X9Y24          FDRE                                         r  gameCPU/game_regfile/M_player_obs_q_reg[0]/C
+                         clock pessimism              0.259    15.097    
+                         clock uncertainty           -0.035    15.062    
+    SLICE_X9Y24          FDRE (Setup_fdre_C_D)       -0.067    14.995    gameCPU/game_regfile/M_player_obs_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         14.995    
+                         arrival time                         -14.574    
+  -------------------------------------------------------------------
+                         slack                                  0.421    
+
+Slack (MET) :             0.447ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_column2_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.466ns  (logic 2.577ns (27.223%)  route 6.889ns (72.777%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.020ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.841ns = ( 14.841 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.826    14.600    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X10Y23         FDRE                                         r  gameCPU/game_regfile/M_column2_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.436    14.841    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X10Y23         FDRE                                         r  gameCPU/game_regfile/M_column2_q_reg[0]/C
+                         clock pessimism              0.272    15.113    
+                         clock uncertainty           -0.035    15.078    
+    SLICE_X10Y23         FDRE (Setup_fdre_C_D)       -0.031    15.047    gameCPU/game_regfile/M_column2_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.047    
+                         arrival time                         -14.600    
+  -------------------------------------------------------------------
+                         slack                                  0.447    
+
+Slack (MET) :             0.455ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_check_playerMovement_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.444ns  (logic 2.577ns (27.288%)  route 6.867ns (72.712%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.035ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.839ns = ( 14.839 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.803    14.577    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X10Y25         FDRE                                         r  gameCPU/game_regfile/M_check_playerMovement_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.434    14.839    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X10Y25         FDRE                                         r  gameCPU/game_regfile/M_check_playerMovement_q_reg[0]/C
+                         clock pessimism              0.259    15.098    
+                         clock uncertainty           -0.035    15.063    
+    SLICE_X10Y25         FDRE (Setup_fdre_C_D)       -0.031    15.032    gameCPU/game_regfile/M_check_playerMovement_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.032    
+                         arrival time                         -14.577    
+  -------------------------------------------------------------------
+                         slack                                  0.455    
+
+Slack (MET) :             0.469ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_player_led_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.432ns  (logic 2.577ns (27.322%)  route 6.855ns (72.678%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.033ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.841ns = ( 14.841 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.792    14.565    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X8Y22          FDRE                                         r  gameCPU/game_regfile/M_player_led_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.436    14.841    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X8Y22          FDRE                                         r  gameCPU/game_regfile/M_player_led_q_reg[0]/C
+                         clock pessimism              0.259    15.100    
+                         clock uncertainty           -0.035    15.065    
+    SLICE_X8Y22          FDRE (Setup_fdre_C_D)       -0.031    15.034    gameCPU/game_regfile/M_player_led_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.034    
+                         arrival time                         -14.565    
+  -------------------------------------------------------------------
+                         slack                                  0.469    
+
+Slack (MET) :             0.490ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_column3_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.408ns  (logic 2.577ns (27.392%)  route 6.831ns (72.608%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.036ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.838ns = ( 14.838 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.767    14.541    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X8Y24          FDRE                                         r  gameCPU/game_regfile/M_column3_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.433    14.838    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X8Y24          FDRE                                         r  gameCPU/game_regfile/M_column3_q_reg[0]/C
+                         clock pessimism              0.259    15.097    
+                         clock uncertainty           -0.035    15.062    
+    SLICE_X8Y24          FDRE (Setup_fdre_C_D)       -0.031    15.031    gameCPU/game_regfile/M_column3_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.031    
+                         arrival time                         -14.541    
+  -------------------------------------------------------------------
+                         slack                                  0.490    
+
+Slack (MET) :             0.564ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_temp_var2_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.300ns  (logic 2.577ns (27.710%)  route 6.723ns (72.290%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.840ns = ( 14.840 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.659    14.433    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X9Y23          FDRE                                         r  gameCPU/game_regfile/M_temp_var2_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.435    14.840    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X9Y23          FDRE                                         r  gameCPU/game_regfile/M_temp_var2_q_reg[0]/C
+                         clock pessimism              0.259    15.099    
+                         clock uncertainty           -0.035    15.064    
+    SLICE_X9Y23          FDRE (Setup_fdre_C_D)       -0.067    14.997    gameCPU/game_regfile/M_temp_var2_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         14.997    
+                         arrival time                         -14.433    
+  -------------------------------------------------------------------
+                         slack                                  0.564    
+
+Slack (MET) :             0.583ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_temp_var3_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.334ns  (logic 2.577ns (27.608%)  route 6.757ns (72.392%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.016ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.845ns = ( 14.845 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.272ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.694    14.468    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X10Y20         FDRE                                         r  gameCPU/game_regfile/M_temp_var3_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.440    14.845    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X10Y20         FDRE                                         r  gameCPU/game_regfile/M_temp_var3_q_reg[0]/C
+                         clock pessimism              0.272    15.117    
+                         clock uncertainty           -0.035    15.082    
+    SLICE_X10Y20         FDRE (Setup_fdre_C_D)       -0.031    15.051    gameCPU/game_regfile/M_temp_var3_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.051    
+                         arrival time                         -14.468    
+  -------------------------------------------------------------------
+                         slack                                  0.583    
+
+Slack (MET) :             0.600ns  (required time - arrival time)
+  Source:                 gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            gameCPU/game_regfile/M_column0_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_0 rise@10.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        9.300ns  (logic 2.577ns (27.710%)  route 6.723ns (72.290%))
+  Logic Levels:           10  (CARRY4=2 LUT4=1 LUT5=3 LUT6=4)
+  Clock Path Skew:        -0.034ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.840ns = ( 14.840 - 10.000 ) 
+    Source Clock Delay      (SCD):    5.133ns
+    Clock Pessimism Removal (CPR):    0.259ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.517     1.517 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.972     3.488    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.096     3.584 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.549     5.133    gameCPU/game_controlunit/clk_IBUF_BUFG
+    SLICE_X10Y24         FDRE                                         r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X10Y24         FDRE (Prop_fdre_C_Q)         0.518     5.651 r  gameCPU/game_controlunit/FSM_sequential_M_game_fsm_q_reg[1]/Q
+                         net (fo=119, routed)         1.188     6.839    gameCPU/game_controlunit/M_game_fsm_q[1]
+    SLICE_X10Y25         LUT5 (Prop_lut5_I4_O)        0.152     6.991 r  gameCPU/game_controlunit/out0_carry_i_46/O
+                         net (fo=16, routed)          0.882     7.873    gameCPU/game_controlunit/out0_carry_i_46_n_0
+    SLICE_X9Y19          LUT4 (Prop_lut4_I3_O)        0.348     8.221 r  gameCPU/game_controlunit/out0_carry_i_54/O
+                         net (fo=1, routed)           0.407     8.628    gameCPU/game_controlunit/out0_carry_i_54_n_0
+    SLICE_X9Y19          LUT6 (Prop_lut6_I5_O)        0.124     8.752 r  gameCPU/game_controlunit/out0_carry_i_23/O
+                         net (fo=1, routed)           0.638     9.391    gameCPU/game_controlunit/out0_carry_i_23_n_0
+    SLICE_X8Y19          LUT6 (Prop_lut6_I5_O)        0.124     9.515 r  gameCPU/game_controlunit/out0_carry_i_3/O
+                         net (fo=2, routed)           0.753    10.268    gameCPU/game_controlunit/M_column0_q_reg[10][1]
+    SLICE_X7Y23          LUT5 (Prop_lut5_I4_O)        0.124    10.392 r  gameCPU/game_controlunit/out0_carry_i_7/O
+                         net (fo=1, routed)           0.000    10.392    gameCPU_n_49
+    SLICE_X7Y23          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.790 r  game_alu/out0_carry/CO[3]
+                         net (fo=1, routed)           0.000    10.790    game_alu/out0_carry_n_0
+    SLICE_X7Y24          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.029 f  game_alu/out0_carry__0/O[2]
+                         net (fo=3, routed)           1.075    12.104    gameCPU/game_alu/M_column1_q[0]_i_7_1[2]
+    SLICE_X6Y25          LUT6 (Prop_lut6_I2_O)        0.302    12.406 r  gameCPU/game_alu/M_column1_q[0]_i_14/O
+                         net (fo=1, routed)           0.619    13.025    gameCPU/game_alu/M_column1_q[0]_i_14_n_0
+    SLICE_X6Y24          LUT5 (Prop_lut5_I4_O)        0.124    13.149 r  gameCPU/game_alu/M_column1_q[0]_i_5/O
+                         net (fo=1, routed)           0.501    13.650    gameCPU/game_regfile/M_column0_q_reg[0]_7
+    SLICE_X6Y23          LUT6 (Prop_lut6_I3_O)        0.124    13.774 r  gameCPU/game_regfile/M_column1_q[0]_i_1/O
+                         net (fo=12, routed)          0.659    14.433    gameCPU/game_regfile/M_game_regfile_write_data[0]
+    SLICE_X8Y23          FDRE                                         r  gameCPU/game_regfile/M_column0_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)     10.000    10.000 r  
+    N14                                               0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         1.446    11.446 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.868    13.314    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    13.405 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         1.435    14.840    gameCPU/game_regfile/clk_IBUF_BUFG
+    SLICE_X8Y23          FDRE                                         r  gameCPU/game_regfile/M_column0_q_reg[0]/C
+                         clock pessimism              0.259    15.099    
+                         clock uncertainty           -0.035    15.064    
+    SLICE_X8Y23          FDRE (Setup_fdre_C_D)       -0.031    15.033    gameCPU/game_regfile/M_column0_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         15.033    
+                         arrival time                         -14.433    
+  -------------------------------------------------------------------
+                         slack                                  0.600    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.142ns  (arrival time - required time)
+  Source:                 col_2_led/M_bit_ctr_q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_2_led/M_state_q_reg_inv/D
+                            (rising edge-triggered cell FDSE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.275ns  (logic 0.186ns (67.534%)  route 0.089ns (32.466%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.049ns
+    Source Clock Delay      (SCD):    1.533ns
+    Clock Pessimism Removal (CPR):    0.503ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.589     1.533    col_2_led/clk_IBUF_BUFG
+    SLICE_X7Y14          FDRE                                         r  col_2_led/M_bit_ctr_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y14          FDRE (Prop_fdre_C_Q)         0.141     1.674 r  col_2_led/M_bit_ctr_q_reg[3]/Q
+                         net (fo=5, routed)           0.089     1.763    col_2_led/M_bit_ctr_q[3]
+    SLICE_X6Y14          LUT6 (Prop_lut6_I3_O)        0.045     1.808 r  col_2_led/M_state_q_inv_i_1__2/O
+                         net (fo=1, routed)           0.000     1.808    col_2_led/M_state_q_inv_i_1__2_n_0
+    SLICE_X6Y14          FDSE                                         r  col_2_led/M_state_q_reg_inv/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.859     2.049    col_2_led/clk_IBUF_BUFG
+    SLICE_X6Y14          FDSE                                         r  col_2_led/M_state_q_reg_inv/C
+                         clock pessimism             -0.503     1.546    
+    SLICE_X6Y14          FDSE (Hold_fdse_C_D)         0.120     1.666    col_2_led/M_state_q_reg_inv
+  -------------------------------------------------------------------
+                         required time                         -1.666    
+                         arrival time                           1.808    
+  -------------------------------------------------------------------
+                         slack                                  0.142    
+
+Slack (MET) :             0.143ns  (arrival time - required time)
+  Source:                 col_3_led/M_bit_ctr_q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_3_led/M_state_q_reg_inv/D
+                            (rising edge-triggered cell FDSE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.276ns  (logic 0.186ns (67.333%)  route 0.090ns (32.667%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.047ns
+    Source Clock Delay      (SCD):    1.532ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.588     1.532    col_3_led/clk_IBUF_BUFG
+    SLICE_X3Y18          FDRE                                         r  col_3_led/M_bit_ctr_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y18          FDRE (Prop_fdre_C_Q)         0.141     1.673 r  col_3_led/M_bit_ctr_q_reg[3]/Q
+                         net (fo=5, routed)           0.090     1.763    col_3_led/M_bit_ctr_q[3]
+    SLICE_X2Y18          LUT6 (Prop_lut6_I3_O)        0.045     1.808 r  col_3_led/M_state_q_inv_i_1__3/O
+                         net (fo=1, routed)           0.000     1.808    col_3_led/M_state_q_inv_i_1__3_n_0
+    SLICE_X2Y18          FDSE                                         r  col_3_led/M_state_q_reg_inv/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.857     2.047    col_3_led/clk_IBUF_BUFG
+    SLICE_X2Y18          FDSE                                         r  col_3_led/M_state_q_reg_inv/C
+                         clock pessimism             -0.502     1.545    
+    SLICE_X2Y18          FDSE (Hold_fdse_C_D)         0.120     1.665    col_3_led/M_state_q_reg_inv
+  -------------------------------------------------------------------
+                         required time                         -1.665    
+                         arrival time                           1.808    
+  -------------------------------------------------------------------
+                         slack                                  0.143    
+
+Slack (MET) :             0.148ns  (arrival time - required time)
+  Source:                 col_1_led/M_ctr_q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_1_led/M_ctr_q_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.282ns  (logic 0.186ns (65.884%)  route 0.096ns (34.116%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.020ns
+    Source Clock Delay      (SCD):    1.506ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.562     1.506    col_1_led/clk_IBUF_BUFG
+    SLICE_X11Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y15         FDRE (Prop_fdre_C_Q)         0.141     1.647 r  col_1_led/M_ctr_q_reg[0]/Q
+                         net (fo=7, routed)           0.096     1.743    col_1_led/M_ctr_q[0]
+    SLICE_X10Y15         LUT6 (Prop_lut6_I3_O)        0.045     1.788 r  col_1_led/M_ctr_q[4]_i_1__1/O
+                         net (fo=1, routed)           0.000     1.788    col_1_led/M_ctr_q[4]_i_1__1_n_0
+    SLICE_X10Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.830     2.020    col_1_led/clk_IBUF_BUFG
+    SLICE_X10Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[4]/C
+                         clock pessimism             -0.501     1.519    
+    SLICE_X10Y15         FDRE (Hold_fdre_C_D)         0.121     1.640    col_1_led/M_ctr_q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.640    
+                         arrival time                           1.788    
+  -------------------------------------------------------------------
+                         slack                                  0.148    
+
+Slack (MET) :             0.155ns  (arrival time - required time)
+  Source:                 col_1_led/M_ctr_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_1_led/M_ctr_q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.299ns  (logic 0.189ns (63.125%)  route 0.110ns (36.875%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.020ns
+    Source Clock Delay      (SCD):    1.506ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.562     1.506    col_1_led/clk_IBUF_BUFG
+    SLICE_X11Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y15         FDRE (Prop_fdre_C_Q)         0.141     1.647 r  col_1_led/M_ctr_q_reg[1]/Q
+                         net (fo=7, routed)           0.110     1.757    col_1_led/M_ctr_q[1]
+    SLICE_X10Y15         LUT5 (Prop_lut5_I1_O)        0.048     1.805 r  col_1_led/M_ctr_q[3]_i_1__1/O
+                         net (fo=1, routed)           0.000     1.805    col_1_led/M_ctr_q[3]_i_1__1_n_0
+    SLICE_X10Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.830     2.020    col_1_led/clk_IBUF_BUFG
+    SLICE_X10Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[3]/C
+                         clock pessimism             -0.501     1.519    
+    SLICE_X10Y15         FDRE (Hold_fdre_C_D)         0.131     1.650    col_1_led/M_ctr_q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.650    
+                         arrival time                           1.805    
+  -------------------------------------------------------------------
+                         slack                                  0.155    
+
+Slack (MET) :             0.163ns  (arrival time - required time)
+  Source:                 col_1_led/M_ctr_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_1_led/M_ctr_q_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.296ns  (logic 0.186ns (62.752%)  route 0.110ns (37.248%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.020ns
+    Source Clock Delay      (SCD):    1.506ns
+    Clock Pessimism Removal (CPR):    0.501ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.562     1.506    col_1_led/clk_IBUF_BUFG
+    SLICE_X11Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y15         FDRE (Prop_fdre_C_Q)         0.141     1.647 r  col_1_led/M_ctr_q_reg[1]/Q
+                         net (fo=7, routed)           0.110     1.757    col_1_led/M_ctr_q[1]
+    SLICE_X10Y15         LUT4 (Prop_lut4_I2_O)        0.045     1.802 r  col_1_led/M_ctr_q[2]_i_1__1/O
+                         net (fo=1, routed)           0.000     1.802    col_1_led/M_ctr_q[2]_i_1__1_n_0
+    SLICE_X10Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.830     2.020    col_1_led/clk_IBUF_BUFG
+    SLICE_X10Y15         FDRE                                         r  col_1_led/M_ctr_q_reg[2]/C
+                         clock pessimism             -0.501     1.519    
+    SLICE_X10Y15         FDRE (Hold_fdre_C_D)         0.120     1.639    col_1_led/M_ctr_q_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.639    
+                         arrival time                           1.802    
+  -------------------------------------------------------------------
+                         slack                                  0.163    
+
+Slack (MET) :             0.166ns  (arrival time - required time)
+  Source:                 col_5_led/M_ctr_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_5_led/M_ctr_q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.310ns  (logic 0.189ns (60.880%)  route 0.121ns (39.120%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.044ns
+    Source Clock Delay      (SCD):    1.529ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.585     1.529    col_5_led/clk_IBUF_BUFG
+    SLICE_X3Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y21          FDRE (Prop_fdre_C_Q)         0.141     1.670 r  col_5_led/M_ctr_q_reg[1]/Q
+                         net (fo=7, routed)           0.121     1.791    col_5_led/M_ctr_q[1]
+    SLICE_X2Y21          LUT5 (Prop_lut5_I1_O)        0.048     1.839 r  col_5_led/M_ctr_q[3]_i_1__5/O
+                         net (fo=1, routed)           0.000     1.839    col_5_led/M_ctr_q[3]_i_1__5_n_0
+    SLICE_X2Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.854     2.044    col_5_led/clk_IBUF_BUFG
+    SLICE_X2Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[3]/C
+                         clock pessimism             -0.502     1.542    
+    SLICE_X2Y21          FDRE (Hold_fdre_C_D)         0.131     1.673    col_5_led/M_ctr_q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.673    
+                         arrival time                           1.839    
+  -------------------------------------------------------------------
+                         slack                                  0.166    
+
+Slack (MET) :             0.174ns  (arrival time - required time)
+  Source:                 col_5_led/M_ctr_q_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_5_led/M_ctr_q_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.307ns  (logic 0.186ns (60.498%)  route 0.121ns (39.502%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.044ns
+    Source Clock Delay      (SCD):    1.529ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.585     1.529    col_5_led/clk_IBUF_BUFG
+    SLICE_X3Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y21          FDRE (Prop_fdre_C_Q)         0.141     1.670 r  col_5_led/M_ctr_q_reg[1]/Q
+                         net (fo=7, routed)           0.121     1.791    col_5_led/M_ctr_q[1]
+    SLICE_X2Y21          LUT4 (Prop_lut4_I2_O)        0.045     1.836 r  col_5_led/M_ctr_q[2]_i_1__5/O
+                         net (fo=1, routed)           0.000     1.836    col_5_led/M_ctr_q[2]_i_1__5_n_0
+    SLICE_X2Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.854     2.044    col_5_led/clk_IBUF_BUFG
+    SLICE_X2Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[2]/C
+                         clock pessimism             -0.502     1.542    
+    SLICE_X2Y21          FDRE (Hold_fdre_C_D)         0.120     1.662    col_5_led/M_ctr_q_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.662    
+                         arrival time                           1.836    
+  -------------------------------------------------------------------
+                         slack                                  0.174    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 col_5_led/M_bit_ctr_q_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_5_led/M_state_q_reg_inv/D
+                            (rising edge-triggered cell FDSE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.292ns  (logic 0.209ns (71.474%)  route 0.083ns (28.526%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.045ns
+    Source Clock Delay      (SCD):    1.530ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.586     1.530    col_5_led/clk_IBUF_BUFG
+    SLICE_X2Y20          FDRE                                         r  col_5_led/M_bit_ctr_q_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y20          FDRE (Prop_fdre_C_Q)         0.164     1.694 r  col_5_led/M_bit_ctr_q_reg[3]/Q
+                         net (fo=5, routed)           0.083     1.777    col_5_led/M_bit_ctr_q[3]
+    SLICE_X3Y20          LUT6 (Prop_lut6_I3_O)        0.045     1.822 r  col_5_led/M_state_q_inv_i_1__5/O
+                         net (fo=1, routed)           0.000     1.822    col_5_led/M_state_q_inv_i_1__5_n_0
+    SLICE_X3Y20          FDSE                                         r  col_5_led/M_state_q_reg_inv/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.855     2.045    col_5_led/clk_IBUF_BUFG
+    SLICE_X3Y20          FDSE                                         r  col_5_led/M_state_q_reg_inv/C
+                         clock pessimism             -0.502     1.543    
+    SLICE_X3Y20          FDSE (Hold_fdse_C_D)         0.092     1.635    col_5_led/M_state_q_reg_inv
+  -------------------------------------------------------------------
+                         required time                         -1.635    
+                         arrival time                           1.822    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.223ns  (arrival time - required time)
+  Source:                 col_4_led/M_ctr_q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_4_led/M_ctr_q_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.344ns  (logic 0.209ns (60.822%)  route 0.135ns (39.178%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.048ns
+    Source Clock Delay      (SCD):    1.533ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.589     1.533    col_4_led/clk_IBUF_BUFG
+    SLICE_X2Y17          FDRE                                         r  col_4_led/M_ctr_q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y17          FDRE (Prop_fdre_C_Q)         0.164     1.697 r  col_4_led/M_ctr_q_reg[2]/Q
+                         net (fo=5, routed)           0.135     1.831    col_4_led/M_ctr_q[2]
+    SLICE_X2Y17          LUT6 (Prop_lut6_I4_O)        0.045     1.876 r  col_4_led/M_ctr_q[4]_i_1__4/O
+                         net (fo=1, routed)           0.000     1.876    col_4_led/M_ctr_q[4]_i_1__4_n_0
+    SLICE_X2Y17          FDRE                                         r  col_4_led/M_ctr_q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.858     2.048    col_4_led/clk_IBUF_BUFG
+    SLICE_X2Y17          FDRE                                         r  col_4_led/M_ctr_q_reg[4]/C
+                         clock pessimism             -0.515     1.533    
+    SLICE_X2Y17          FDRE (Hold_fdre_C_D)         0.121     1.654    col_4_led/M_ctr_q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.654    
+                         arrival time                           1.876    
+  -------------------------------------------------------------------
+                         slack                                  0.223    
+
+Slack (MET) :             0.225ns  (arrival time - required time)
+  Source:                 col_5_led/M_ctr_q_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            col_5_led/M_ctr_q_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_0 rise@0.000ns - clk_0 rise@0.000ns)
+  Data Path Delay:        0.346ns  (logic 0.209ns (60.411%)  route 0.137ns (39.589%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.044ns
+    Source Clock Delay      (SCD):    1.529ns
+    Clock Pessimism Removal (CPR):    0.515ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.284     0.284 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.634     0.918    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.026     0.944 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.585     1.529    col_5_led/clk_IBUF_BUFG
+    SLICE_X2Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y21          FDRE (Prop_fdre_C_Q)         0.164     1.693 r  col_5_led/M_ctr_q_reg[2]/Q
+                         net (fo=5, routed)           0.137     1.830    col_5_led/M_ctr_q[2]
+    SLICE_X2Y21          LUT6 (Prop_lut6_I4_O)        0.045     1.875 r  col_5_led/M_ctr_q[4]_i_1__5/O
+                         net (fo=1, routed)           0.000     1.875    col_5_led/M_ctr_q[4]_i_1__5_n_0
+    SLICE_X2Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_0 rise edge)      0.000     0.000 r  
+    N14                                               0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    N14                  IBUF (Prop_ibuf_I_O)         0.472     0.472 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.689     1.161    clk_IBUF
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.029     1.190 r  clk_IBUF_BUFG_inst/O
+                         net (fo=501, routed)         0.854     2.044    col_5_led/clk_IBUF_BUFG
+    SLICE_X2Y21          FDRE                                         r  col_5_led/M_ctr_q_reg[4]/C
+                         clock pessimism             -0.515     1.529    
+    SLICE_X2Y21          FDRE (Hold_fdre_C_D)         0.121     1.650    col_5_led/M_ctr_q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.650    
+                         arrival time                           1.875    
+  -------------------------------------------------------------------
+                         slack                                  0.225    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y0  clk_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[1]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[2]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[4]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X10Y16   col_1_led/M_bit_ctr_q_reg[3]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X10Y16   col_1_led/M_bit_ctr_q_reg[4]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X11Y15   col_1_led/M_ctr_q_reg[0]/C
+Min Period        n/a     FDRE/C   n/a            1.000         10.000      9.000      SLICE_X11Y15   col_1_led/M_ctr_q_reg[1]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y26   condLeft/M_ctr_q_reg[17]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y26   condLeft/M_ctr_q_reg[18]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y26   condLeft/M_ctr_q_reg[19]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y22   condLeft/M_ctr_q_reg[1]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y22   condLeft/M_ctr_q_reg[2]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y22   condLeft/M_ctr_q_reg[3]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y23   condLeft/M_ctr_q_reg[4]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y23   condLeft/M_ctr_q_reg[5]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y23   condLeft/M_ctr_q_reg[6]/C
+Low Pulse Width   Fast    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X14Y23   condLeft/M_ctr_q_reg[7]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[2]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[3]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X2Y27    col_0_led/M_bit_ctr_q_reg[4]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X7Y13    col_2_led/M_ctr_q_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X6Y13    col_2_led/M_ctr_q_reg[1]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X7Y13    col_2_led/M_ctr_q_reg[2]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X7Y13    col_2_led/M_ctr_q_reg[3]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         5.000       4.500      SLICE_X6Y13    col_2_led/M_ctr_q_reg[4]/C
+
+
+

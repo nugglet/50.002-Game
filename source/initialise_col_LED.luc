@@ -1,0 +1,80 @@
+module initialise_col_LED (
+    input col0[16],
+    input col1[16],
+    input col2[16],
+    input col3[16],
+    input col4[16],
+    input col5[16],
+    output col0_led[7][24],
+    output col1_led[7][24],
+    output col2_led[7][24],
+    output col3_led[7][24],
+    output col4_led[7][24],
+    output col5_led[7][24]
+  ) {
+  
+  var i;
+
+  always {
+    col0_led = 7x{{h000000}};
+    col1_led = 7x{{h000000}};
+    col2_led = 7x{{h000000}};
+    col3_led = 7x{{h000000}};
+    col4_led = 7x{{h000000}};
+    col5_led = 7x{{h000000}};
+    
+    for (i = 0; i < 7; i++) {
+      if (col0[i] == 1) {
+        col0_led[i] = hFF0000;
+      }
+      else {
+        col0_led[i] = h000000;
+      }
+    }
+    
+    for (i = 0; i < 7; i++) {
+      if (col1[i] == 1) {
+        col1_led[i] = hFF0000;
+      }
+      else {
+        col1_led[i] = h000000;
+      }
+    }
+    
+    for (i = 0; i < 7; i++) {
+      if (col2[i] == 1) {
+        col2_led[i] = hFF0000;
+      }
+      else {
+        col2_led[i] = h000000;
+      }
+    }
+    
+    for (i = 0; i < 7; i++) {
+      if (col3[i] == 1) {
+        col3_led[i] = hFF0000;
+      }
+      else {
+        col3_led[i] = h000000;
+      }
+    }
+    
+    for (i = 0; i < 7; i++) {
+      if (col4[i] == 1) {
+        col4_led[i] = hFF0000;
+      }
+      else {
+        col4_led[i] = h000000;
+      }
+    }
+    
+    for (i = 0; i < 7; i++) {
+      if (col5[i] == 1) {
+        col5_led[i] = hFF0000;
+      }
+      else {
+        col5_led[i] = h000000;
+      }
+    }
+  }
+}

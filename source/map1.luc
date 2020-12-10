@@ -1,0 +1,127 @@
+module map1 (
+    input clk,  // clock
+    input rst,  // reset
+    input start_button, 
+    output map1col1,
+    output map1col2,
+    output map1col3,
+    output map1col4,
+    output map1col5,
+    output map1col6
+  ) {
+
+  dff col0[7][24](.clk(clk));
+  dff col1[7][24](.clk(clk));
+  dff col2[7][24](.clk(clk));
+  dff col3[7][24](.clk(clk));
+  dff col4[7][24](.clk(clk));
+  dff col5[7][24](.clk(clk));
+  
+  ws2812b_writer map1_col1(#PIXEL_COUNT(7), .clk(clk), .rst(rst)); //set for 3 pixels
+  ws2812b_writer map1_col2(#PIXEL_COUNT(7), .clk(clk), .rst(rst)); //set for 3 pixels
+  ws2812b_writer map1_col3(#PIXEL_COUNT(7), .clk(clk), .rst(rst)); //set for 3 pixels
+  ws2812b_writer map1_col4(#PIXEL_COUNT(7), .clk(clk), .rst(rst)); //set for 3 pixels
+  ws2812b_writer map1_col5(#PIXEL_COUNT(7), .clk(clk), .rst(rst)); //set for 3 pixels
+  ws2812b_writer map1_col6(#PIXEL_COUNT(7), .clk(clk), .rst(rst)); //set for 3 pixels
+  .clk(clk) {
+  
+    fsm move_led(#INIT(START)) = {IDLE, START, ROW1, ROW2, ROW3, ROW4, ROW5, ROW6, ROW7, ROW8, ROW9, ROW10, ROW11, ROW12, ROW13, ROW14, ROW15};
+    edge_detector slowClockEdge(#RISE(1), #FALL(0));
+    
+    .rst(rst){
+      counter slowtimer(#SIZE(1), #DIV(26));
+    }
+  }
+  
+  always {
+             
+    map1_col1.update=1; //sample write 
+    map1_col2.update=1;
+    map1_col3.update=1;
+    map1_col4.update=1;
+    map1_col5.update=1;
+    map1_col6.update=1;
+    
+    map1_col1.color = col0.q[map1_col1.pixel];
+    map1_col2.color = col1.q[map1_col2.pixel];
+    map1_col3.color = col2.q[map1_col3.pixel];
+    map1_col4.color = col3.q[map1_col4.pixel];
+    map1_col5.color = col4.q[map1_col5.pixel];
+    map1_col6.color = col5.q[map1_col6.pixel];
+    
+    map1col1 = map1_col1.led;
+    map1col2 = map1_col2.led;
+    map1col3 = map1_col3.led;
+    map1col4 = map1_col4.led;
+    map1col5 = map1_col5.led;
+    map1col6 = map1_col6.led;
+
+    slowClockEdge.in = slowtimer.value;
+    
+    /*const MAP_ONE = {
+    {h000000, h000000, h000000, h000000, h000000, hFF0000, h000000, h000000, h000000, hFF0000, h000000, hFF0000, h000000, h000000, h000000, hFF0000},
+    {h000000, h000000, h000000, h000000, h000000, hFF0000, h000000, hFF0000, h000000, h000000, h000000, hFF0000, h000000, hFF0000, h000000, hFF0000},
+    {h000000, h000000, h000000, hFF0000, h000000, h000000, h000000, h000000, h000000, hFF0000, h000000, h000000, h000000, h000000, h000000, hFF0000},
+    {h000000, h000000, h000000, hFF0000, h000000, h000000, h000000, hFF0000, h000000, h000000, h000000, h000000, h000000, h000000, h000000, hFF0000},
+    {h000000, h000000, h000000, h000000, h000000, hFF0000, h000000, h000000, h000000, hFF0000, h000000, hFF0000, h000000, hFF0000, h000000, h000000},
+    {h000000, h000000, h000000, h000000, h000000, hFF0000, h000000, hFF0000, h000000, h000000, h000000, hFF0000, h000000, hFF0000, h000000, h000000}
+  };*/
+    
+    
+    case(move_led.q) {
+    
+      move_led.IDLE:
+        col0.d = {h000000, h000000, h000000, h000000, h000000, h000000, h000000};
+        col1.d = {h000000, h000000, h000000, h000000, h000000, h000000, h000000};
+        col2.d = {h000000, h000000, h000000, h000000, h000000, h000000, h000000};
+        col3.d = {h000000, h000000, h000000, h000000, h000000, h000000, h000000};
+        col4.d = {h000000, h000000, h000000, h000000, h000000, h000000, h000000};
+        col5.d = {h000000, h000000, h000000, h000000, h000000, h000000, h000000};
+        
+        map1_col1.color = col0.q[map1_col1.pixel];
+        map1_col2.color = col0.q[map1_col2.pixel];
+        map1_col3.color = col0.q[map1_col3.pixel];
+        map1_col4.color = col0.q[map1_col4.pixel];
+        map1_col5.color = col0.q[map1_col5.pixel];
+        map1_col6.color = col0.q[map1_col6.pixel];
+        
+        map1col1 = map1_col1.led;
+        map1col2 = map1_col2.led;
+        map1col3 = map1_col3.led;
+        map1col4 = map1_col4.led;
+        map1col5 = map1_col5.led;
+        map1col6 = map1_col6.led;
+        
+        if (start_button) {
+          move_led.d = move_led.ROW1;
+        }
+    
+      move_led.ROW1:
+
+          col0.d = {h000000, hFF0000, h000000, h000000, h000000, h000000, h000000};
+          col1.d = {h000000, hFF0000, h000000, h000000, h000000, h000000, h000000};
+          col2.d = {h000000, h000000, h000000, hFF0000, h000000, h000000, h000000};
+          col3.d = {h000000, h000000, h000000, hFF0000, h000000, h000000, h000000};
+          col4.d = {h000000, hFF0000, h000000, h000000, h000000, h000000, h000000};
+          col5.d = {h000000, hFF0000, h000000, h000000, h000000, h000000, h000000};
+        
+          map1_col1.color = col0.q[map1_col1.pixel];
+          map1_col2.color = col0.q[map1_col2.pixel];
+          map1_col3.color = col0.q[map1_col3.pixel];
+          map1_col4.color = col0.q[map1_col4.pixel];
+          map1_col5.color = col0.q[map1_col5.pixel];
+          map1_col6.color = col0.q[map1_col6.pixel];
+          
+          map1col1 = map1_col1.led;
+          map1col2 = map1_col2.led;
+          map1col3 = map1_col3.led;
+          map1col4 = map1_col4.led;
+          map1col5 = map1_col5.led;
+          map1col6 = map1_col6.led;
+      
+        if (slowClockEdge.out == b1) {
+          move_led.d = move_led.ROW2;
+          }
+        else {
+         move_led.d = move_led.ROW1;
+        }

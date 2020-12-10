@@ -1,0 +1,139 @@
+module fsmLED (
+    input clk,  // clock
+    input rst,  // reset
+    output outled
+  ) {
+
+  dff ledcolor[8][24](.clk(clk));
+  
+  ws2812b_writer led_strip(#PIXEL_COUNT(8), .clk(clk), .rst(rst)); //set for 3 pixels
+  .clk(clk) {
+    fsm move_led(#INIT(START)) = {IDLE, START, LANE1, LANE2, LANE3, LANE4, LANE5, LANE6, LANE7, LANE8};
+    
+    dff counter[27];
+  }
+  
+  always {
+             
+    led_strip.update=1; //sample write 
+    led_strip.color = ledcolor.q[led_strip.pixel];
+    outled = led_strip.led;
+
+    counter.d = counter.q + 1;
+    
+    
+    case(move_led.q) {
+    
+      move_led.IDLE:
+        ledcolor.d = {h000000, h000000, h000000, h000000, h000000, h000000, h000000, h000000};
+        led_strip.color = ledcolor.q[led_strip.pixel];
+        outled = led_strip.led;
+    
+      move_led.START:
+          ledcolor.d = {hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFF0000};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+      
+        if (counter.q[26] == 1) {
+          move_led.d = move_led.LANE1;
+          }
+        else {
+         move_led.d = move_led.START;
+        }
+    
+      move_led.LANE1:
+          ledcolor.d = {hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFF0000, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+      
+        if (counter.q == 1) {
+          move_led.d = move_led.LANE2;
+          }
+        else {
+         move_led.d = move_led.LANE1;
+        }
+    
+      move_led.LANE2:
+      
+          ledcolor.d = {hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFF0000, hFFFFFF, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+        if (counter.q == 1) {
+          move_led.d = move_led.LANE3;
+          }
+        else {
+         move_led.d = move_led.LANE2;
+        }
+        
+        move_led.LANE3:
+      
+          ledcolor.d = {hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFF0000, hFFFFFF, hFFFFFF, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+        if (counter.q == 1) {
+          move_led.d = move_led.LANE4;
+          }
+        else {
+         move_led.d = move_led.LANE3;
+        }
+        
+        move_led.LANE4:
+      
+          ledcolor.d = {hFFFFFF, hFFFFFF, hFFFFFF, hFF0000, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+        if (counter.q == 1) {
+          move_led.d = move_led.LANE5;
+          }
+        else {
+         move_led.d = move_led.LANE4;
+        }
+        
+        move_led.LANE5:
+      
+          ledcolor.d = {hFFFFFF, hFFFFFF, hFF0000, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+        if (counter.q == 1) {
+          move_led.d = move_led.LANE6;
+          }
+        else {
+         move_led.d = move_led.LANE5;
+        }
+        
+        move_led.LANE6:
+      
+          ledcolor.d = {hFFFFFF, hFF0000, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+        if (counter.q == 1) {
+          move_led.d = move_led.LANE7;
+          }
+        else {
+         move_led.d = move_led.LANE6;
+        }
+        
+        move_led.LANE7:
+      
+          ledcolor.d = {hFF0000, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+        if (counter.q == 1) {
+          move_led.d = move_led.LANE8;
+          }
+        else {
+         move_led.d = move_led.LANE7;
+        }
+        
+        move_led.LANE8:
+      
+          ledcolor.d = {hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF, hFFFFFF};
+          led_strip.color = ledcolor.q[led_strip.pixel];
+          outled=led_strip.led;
+        if (counter.q[26] == 1) {
+          move_led.d = move_led.IDLE;
+          }
+        else {
+         move_led.d = move_led.LANE8;
+        }
+    }

@@ -1,0 +1,116 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Dec  1 16:17:23 2020
+| Host         : LAPTOP-JUUSF46K running 64-bit major release  (build 9200)
+| Command      : report_methodology -file au_top_0_methodology_drc_routed.rpt -pb au_top_0_methodology_drc_routed.pb -rpx au_top_0_methodology_drc_routed.rpx
+| Design       : au_top_0
+| Device       : xc7a35tftg256-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 15
++-----------+----------+------------------------------------------------------+------------+
+| Rule      | Severity | Description                                          | Violations |
++-----------+----------+------------------------------------------------------+------------+
+| TIMING-18 | Warning  | Missing input or output delay                        | 13         |
+| XDCC-4    | Warning  | User Clock constraint overwritten with the same name | 1          |
+| XDCC-8    | Warning  | User Clock constraint overwritten on the same source | 1          |
++-----------+----------+------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on io_button[0] relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on io_button[1] relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on io_button[2] relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on io_button[3] relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on io_button[4] relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on rst_n relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on map_led0 relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on map_led1 relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on map_led2 relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on map_led3 relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on map_led4 relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on map_led5 relative to clock(s) clk_0
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on playerled relative to clock(s) clk_0
+Related violations: <none>
+
+XDCC-4#1 Warning
+User Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous user clock constraint with the same name.
+New: create_clock -period 10.000 -name clk_0 -waveform {0.000 5.000} [get_ports clk] (Source: C:/Users/zhiyi/Documents/alchitry/ObstacleGame/work/constraint/custom.xdc (Line: 2))
+Previous: create_clock -period 10.000 -name clk_0 -waveform {0.000 5.000} [get_ports clk] (Source: C:/Users/zhiyi/Documents/alchitry/ObstacleGame/work/constraint/alchitry.xdc (Line: 2))
+Related violations: <none>
+
+XDCC-8#1 Warning
+User Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous user clock constraint defined on the same source.
+New: create_clock -period 10.000 -name clk_0 -waveform {0.000 5.000} [get_ports clk] (Source: C:/Users/zhiyi/Documents/alchitry/ObstacleGame/work/constraint/custom.xdc (Line: 2))
+Previous: create_clock -period 10.000 -name clk_0 -waveform {0.000 5.000} [get_ports clk] (Source: C:/Users/zhiyi/Documents/alchitry/ObstacleGame/work/constraint/alchitry.xdc (Line: 2))
+Related violations: <none>
+
+
